@@ -4,7 +4,7 @@
   "description": "Helpers for creating FSA compatible actions",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "istanbul test _mocha",
     "build": "babel -d lib/ src/"
   },
   "repository": {
@@ -25,6 +25,8 @@
   "homepage": "https://github.com/nkt/redux-create-action#readme",
   "devDependencies": {
     "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "istanbul": "^0.3.21",
     "mocha": "^2.3.3"
   }
 }
