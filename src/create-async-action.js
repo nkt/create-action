@@ -8,7 +8,7 @@ function createAsyncAction(type, promise) {
     });
 
     promise.then(
-      (payload) => isFunction(payload) ? payload(dispatch) : dispatch({type, payload}),
+      (payload) => typeof payload === 'function' ? payload(dispatch) : dispatch({type, payload}),
       (payload) => dispatch({type, payload, error: true})
     );
   };
