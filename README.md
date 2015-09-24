@@ -1,5 +1,7 @@
 # Create Action
 
+[![Build Status](https://circleci.com/gh/nkt/create-action.svg?style=svg)](https://circleci.com/gh/nkt/create-action)
+
 Helpers for creating FSA compatible actions.
 
 ## Installation
