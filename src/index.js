@@ -1,7 +1,2 @@
-const createAction = require('./create-action');
-const createAsyncAction = require('./create-async-action');
-
-module.exports = {
-  createAction,
-  createAsyncAction
-};
+export { default as createAction } from './create-action';
+export { default as createAsyncAction } from './create-async-action';

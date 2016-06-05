@@ -14,4 +14,4 @@ function createAsyncAction(type, promise) {
   };
 }
 
-module.exports = createAsyncAction;
+export default createAsyncAction;
