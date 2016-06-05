@@ -1,10 +1,20 @@
-function createAction(type, payload, error, meta) {
-  return {
-    type,
-    payload,
-    error: Boolean(error),
-    meta: meta || {}
+function createAction(...args) {
+  const [type, payload, meta] = args;
+  const action = { type };
+
+  if (args.length > 1) {
+    if (payload instanceof Error) {
+      action.error = true;
+    }
+
+    action.payload = payload;
   }
+
+  if (args.length > 2) {
+    action.meta = meta;
+  }
+
+  return action;
 }
 
-module.exports = createAction;
+export default createAction;
